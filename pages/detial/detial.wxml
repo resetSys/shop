@@ -1,0 +1,64 @@
+<view class="detial">
+  <!-- 
+    功能需求:
+    轮播图
+    价格 商品名称 收藏
+    详情展示
+    客服 分享 加入购物车 立即购买
+    <image wx:for="{{goodObj.detial}}" wx:key="index" src="{{item}}" mode="aspectFit"/>
+
+  -->
+  <swiper class="swiper" indicator-dots indicator-color="#fff" autoplay
+   interval="5000" duration="1000" circular indicator-active-color="var(--theme-color)">
+    <swiper-item bindtap="previewImg" 
+      wx:for="{{goodObj.swiper}}" 
+      wx:key="index"
+      data-index="{{index}}">
+      <image src="{{item}}" mode="widthFix"/>
+    </swiper-item>
+  </swiper>
+  <view class="price">
+    ￥{{goodObj.price}}
+  </view>
+  <view class="base-msg">
+    <view class="name">
+      {{goodObj.name}}
+    </view>
+    <view class="collect">
+      <text class="iconfont icon-shoucang1"></text>
+      收藏
+    </view>
+  </view>
+  <view class="detials">
+    <image wx:for="{{goodObj.detial}}" wx:key="index" src="{{item}}" mode="widthFix"/>
+  </view>
+  <view class="bottom-bar">
+    <view class="service">
+      <view class="item">
+        <text class="iconfont icon-kefu1"></text>
+        客服
+        <button open-type="contact"></button>
+      </view>
+      <view class="item">
+        <text class="iconfont icon-che"></text>
+        分享
+        <button open-type="share"></button>
+      </view>
+      <navigator class="item" url="../cart/cart" open-type="switchTab">
+        <view>
+          <text class="iconfont icon-che"></text>
+          购物车
+        </view>
+      </navigator>
+    </view>
+    <view class="operation">
+      <view class="add-cart" bindtap="addCart">加入购物车</view>
+      <view class="buy">购买</view>
+    </view>
+      
+      
+  </view>
+    
+    
+</view>
+  

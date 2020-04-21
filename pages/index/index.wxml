@@ -1,0 +1,40 @@
+<view class="index">
+  <navigator target="self" url="../search/search" hover-class="navigator-hover" open-type="navigate">
+    <searchinput/>
+  </navigator>
+  <!--swiper轮播图-->
+  <swiper class="swiper" indicator-dots indicator-color="rgba(0,0,0,.3)" autoplay circular>
+    <swiper-item wx:for="{{swiperList}}" wx:key="id">
+      <image src="{{item.url}}"/>
+    </swiper-item>
+  </swiper>
+  <!--推荐内容-->
+  <view class="recomm">
+    <view class="recomm-item" wx:for="{{recommList}}" wx:key="index">
+      <navigator>
+        <image src="{{item.url}}" mode="widthFix"/>
+        <view>
+          {{item.name}}
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <!--瀑布流-->
+  <view class="floor">
+    <view wx:for="{{floorList}}" wx:key="title">
+      <view class="title">
+        {{item.title}}
+      </view>
+      <view class="images">
+        <view class="big-img">
+          <image src="{{item.url}}" mode="widthFix" lazy-load="true"/>
+        </view>
+        <view class="small-img">
+          <view wx:for="{{item.children}}" wx:key="index" wx:for-item="child">
+            <image src="{{child.url}}" mode="widthFix" lazy-load="true"/>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

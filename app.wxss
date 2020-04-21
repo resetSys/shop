@@ -1,0 +1,10 @@
+@import "./styles/iconfont.wxss";
+view,text{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+page{
+  --theme-color:#d81e06;
+}

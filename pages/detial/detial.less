@@ -1,0 +1,115 @@
+.detial{
+  width: 100%;
+  height: 100%;
+  padding-bottom: 100rpx;
+  box-sizing: content-box;
+  .swiper{
+    width: 100vw;
+    height: 100vw;
+    swiper-item{
+      width: 100%;
+      height: 100%;
+      image{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .price{
+    padding: 20rpx;
+    color: var(--theme-color);
+    font-size: 40rpx;
+  }
+  
+  .base-msg{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    padding: 10rpx 0;
+    box-sizing: content-box;
+    .name{
+      // flex-grow: 5;
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      width: 625rpx;
+      height: auto;
+      padding: 10rpx;
+      line-height: 1.5;
+    }
+    .collect{
+      // flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10rpx;
+      width: 125rpx;
+      border-left: .5rpx solid #dcdcdc;
+    }
+  }
+  .detials{
+    display: flex;
+    width: 100%;
+    padding: 10rpx;
+    height: auto;
+    flex-direction: column;
+    image{
+      width: 100%;
+      // padding: 10rpx 0;
+    }
+  }
+  .bottom-bar{
+    height: 100rpx;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    .service{
+      display: flex;
+      flex-grow: 1;
+      background-color: #fff;
+      .item{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        button{
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+        }
+        view{
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+    .operation{
+      display: flex;
+      flex-grow: 1;
+      view{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .add-cart{
+        background-color: #fb970b;
+      }
+      .buy{
+        background-color: var(--theme-color);
+      }
+    }
+  }
+}

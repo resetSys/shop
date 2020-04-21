@@ -1,0 +1,67 @@
+<view class="user">
+  <view class="get-user-info" wx:if="{{!userInfo.nickName}}">
+    <button plain open-type="getUserInfo" bindgetuserinfo="getUserInfo"/>
+  </view>
+  <view wx:else class="user-info">
+    <image class="user-info-bg" src="{{userInfo.avatarUrl}}" mode="widthFix"/>
+    <image class="user-info-head" src="{{userInfo.avatarUrl}}" mode="widthFix"/>
+    <view class="user-info-name">
+      {{userInfo.nickName}}
+    </view>
+  </view>
+  <view class="collect">
+    <view class="collect-item">
+      <view class="num">
+        0
+      </view>
+      <view>
+        收藏夹
+      </view>
+    </view>
+    <view class="collect-item">
+      <view class="num">
+        0
+      </view>
+      <view>
+        关注店铺
+      </view>
+    </view>
+    <view class="collect-item">
+      <view class="num">
+        0
+      </view>
+      <view>
+        足迹
+      </view>
+    </view>
+  </view>
+  <view class="order-form">
+    <view class="order-title">
+      <view>
+        我的订单
+      </view>
+      <view class="more-order">
+        查看全部订单 >
+      </view>
+    </view>
+    <view class="order-group">
+      <view class="order-item">
+        <image src="../../icons/user/pay.png" mode="aspectFit"/>
+        待付款
+      </view>
+      <view class="order-item">
+        <image src="../../icons/user/fahuo.png" mode="aspectFit"/>
+        待发货
+      </view>
+      <view class="order-item">
+        <image src="../../icons/user/shouhuo.png" mode="aspectFit"/>
+        待收货
+      </view>
+      <view class="order-item">
+        <image src="../../icons/user/say.png" mode="aspectFit"/>
+        待评价
+      </view>
+    </view>
+  </view>
+</view>
+  

@@ -1,0 +1,83 @@
+.pay {
+  width: 100%;
+  height: 100%;
+}
+.pay .get-location {
+  margin: 20rpx auto;
+}
+.pay .address {
+  padding: 20rpx;
+}
+.pay .address .name {
+  display: flex;
+  justify-content: space-between;
+}
+.pay .shop-list {
+  width: 100%;
+  padding-bottom: 100rpx;
+}
+.pay .shop-list .shop-list-item {
+  display: flex;
+  height: 200rpx;
+  padding: 10rpx 0;
+  margin: 10rpx;
+  border-radius: 10rpx;
+  box-sizing: content-box;
+  flex-direction: row;
+  background-color: #f3f2f2;
+}
+.pay .shop-list .shop-list-item .item-img {
+  width: 200rpx;
+  padding: 10rpx;
+  overflow: hidden;
+}
+.pay .shop-list .shop-list-item .item-img image {
+  width: 100%;
+  height: 100%;
+}
+.pay .shop-list .shop-list-item .item-detial {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.pay .shop-list .shop-list-item .item-detial .item-detial-title {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.pay .shop-list .shop-list-item .item-detial .item-detial-num {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.pay .shop-list .shop-list-item .item-detial .item-detial-num .price {
+  color: var(--theme-color);
+  font-size: 40rpx;
+}
+.pay .shop-list .shop-list-item .item-detial .item-detial-num .num {
+  display: flex;
+  padding-right: 20rpx;
+}
+.pay .bottom {
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20rpx;
+  bottom: 0;
+  width: 100%;
+  height: 100rpx;
+  border-top: 1rpx solid #dcdcdc;
+}
+.pay .bottom .pay-detial {
+  padding: 0 20rpx;
+}
+.pay .bottom .pay-btn {
+  padding: 15rpx 30rpx;
+  background-color: var(--theme-color);
+  color: #fff;
+  border-radius: 40rpx;
+}

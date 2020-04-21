@@ -1,0 +1,32 @@
+<view class="detial">
+  <navigator target="self" url="../search/search" hover-class="navigator-hover" open-type="navigate">
+    <searchinput/>
+  </navigator>
+  <view class="detial-list">
+    <view class="tab-control">
+      <view class="{{index==currIndex?'active':''}}" 
+        wx:for="{{goodsList.title}}" wx:key="index"
+        bindtap="handleItem" data-index="{{index}}">
+        {{item}}
+      </view>
+    </view>
+    <scroll-view  scroll-y bindscrolltolower="loadMore">
+      <view class="tab-content">
+        <navigator class="content-item" url="../detial/detial"
+          wx:for="{{goodsList.content}}"
+          wx:key="index">
+          <image src="{{item.url}}" lazy-load="true"/>
+          <view>
+            <view class="item-title">
+              {{item.title}}
+            </view>
+            <view class="item-price">
+              ￥{{item.price}}
+            </view>
+          </view>
+        </navigator>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+  

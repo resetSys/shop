@@ -1,0 +1,63 @@
+.swiper {
+  width: 100%;
+  height: 250rpx;
+}
+.swiper swiper-item {
+  width: 100%;
+  height: 100%;
+}
+.swiper swiper-item image {
+  width: 750rpx;
+  height: 100%;
+}
+.recomm {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+.recomm view {
+  flex: 1;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.recomm view image {
+  width: 100%;
+  height: auto;
+}
+.recomm view view {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+.floor {
+  width: 100%;
+  height: auto;
+}
+.floor .title {
+  width: 100%;
+  padding: 20rpx 10rpx;
+}
+.floor .images {
+  padding-top: 5rpx;
+  display: flex;
+}
+.floor .images .big-img {
+  flex: 2;
+  padding: 5rpx;
+  box-sizing: border-box;
+}
+.floor .images .big-img image {
+  width: 100%;
+}
+.floor .images .small-img {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.floor .images .small-img view {
+  padding: 2.5rpx;
+  box-sizing: border-box;
+}
+.floor .images .small-img view image {
+  width: 100%;
+}

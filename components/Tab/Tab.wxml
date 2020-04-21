@@ -1,0 +1,27 @@
+<view class="tab">
+  <view class="tab-control">
+    <view class="{{index==currIndex?'active':''}}" 
+      wx:for="{{goodsList.title}}" wx:key="index"
+      bindtap="handleItem" data-index="{{index}}">
+      {{item}}
+    </view>
+  </view>
+  <scroll-view  scroll-y bindscrolltolower="loadMore">
+    <view class="tab-content">
+      <view class="content-item" 
+      wx:for="{{goodsList.content}}"
+      wx:key="index">
+        <image src="{{item.url}}" lazy-load="true"/>
+        <view>
+          <view class="item-title">
+            {{item.title}}
+          </view>
+          <view class="item-price">
+            ￥{{item.price}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+  

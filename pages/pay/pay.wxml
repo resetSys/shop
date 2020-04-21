@@ -1,0 +1,57 @@
+<view class="pay">
+  <!--
+    支付页面
+    首先是收获地址的选择
+    然后是商品的展示
+    当点击结算的时候才会跳转到支付界面，所以只要判断缓存中
+    的数据为true的时候就是要支付的钱
+    底部显示付款按钮和总价
+  -->
+  <button wx:if="{{!address.addressInfo}}" bindtap="getLocation" class="get-location"
+    type="primary" plain>
+    获取收货地址
+  </button>
+  <view class="address" wx:else>
+    <view class="name">
+      <view>
+        {{address.userName}}
+      </view>
+      <view>
+        {{address.telNumber}}
+      </view>
+    </view>
+    <view class="addressInfo">
+      {{address.addressInfo}}
+    </view>
+  </view>
+  <view class="shop-list">
+    <view class="shop-list-item" wx:for="{{shopList}}" wx:key="index">
+      <view class="item-img">
+        <image src="{{item.swiper[0]}}"/>
+      </view>
+      <view class="item-detial">
+        <view class="item-detial-title">
+          {{item.name}}
+        </view>
+        <view class="item-detial-num">
+          <view class="price">
+            ￥{{item.price}}
+          </view>
+          <view class="num">
+            数量:{{item.num}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="bottom">
+    <view class="pay-detial">
+      共计:{{allCount}}件 总金额:￥{{total}}
+    </view>
+    <view class="pay-btn">
+      支付
+    </view>
+  </view>
+    
+</view>
+  

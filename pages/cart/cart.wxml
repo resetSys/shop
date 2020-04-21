@@ -1,0 +1,53 @@
+<view class="cart">
+  <!--商品列表展示-->
+  <view class="shop-list">
+    <view class="shop-list-item" wx:for="{{shopList}}" wx:key="index">
+      <view class="item-check">
+        <checkbox bindtap="changeCheck" data-currIndex="{{index}}" checked="{{item.checked}}" color="var(--theme-color)"/>
+      </view>
+      <view class="item-img">
+        <image src="{{item.swiper[0]}}"/>
+      </view>
+      <view class="item-detial">
+        <view class="item-detial-title">
+          {{item.name}}
+        </view>
+        <view class="item-detial-num">
+          <view class="price">
+            ￥{{item.price}}
+          </view>
+          <view class="num">
+            <view class="add" bindtap="changeNum" data-num="{{1}}" data-currIndex="{{index}}">
+              +
+            </view>
+            {{item.num}}
+            <view class="sub" bindtap="changeNum" data-num="{{-1}}" data-currIndex="{{index}}">
+              -
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="clearing">
+    <view class="checkAll">
+      <checkbox checked="{{checkedAll}}" 
+      bindtap="checkedAll" 
+      color="var(--theme-color)">全选</checkbox>
+      <view class="delete" bindtap="delete" wx:if="{{checkedAll}}">
+        删除
+      </view>
+    </view>
+    <view class="total">
+      <view class="total-price">
+        合计:￥{{totalize}}
+      </view>
+      <view class="total-btn" bindtap="navigator">
+        去结算
+      </view>
+        
+    </view>
+      
+  </view>
+</view>
+  
